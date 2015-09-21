@@ -1,0 +1,9 @@
+{% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li> {{ question.content }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No messages are available.</p>
+{% endif %}
