@@ -1,8 +1,6 @@
-{% block head %}
-  <title>Login</title>
-{% endblock %}
+{% extends 'base.html' %}
 
-{% block body %}
+{% block body_block %}
   {% if form.errors %}
   <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
