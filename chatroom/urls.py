@@ -18,12 +18,8 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
-import socketio.sdjango
-
-socketio.sdjango.autodiscover()
 
 urlpatterns = [
-    url("^socket\.io", include(socketio.sdjango.urls)),
     url(r'^$', auth_views.login, {'redirect_field_name': '/chat/'}),
     url(r'^chat/', include('client.urls')),
     url(r'^admin/', include(admin.site.urls)),
